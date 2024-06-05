@@ -1,0 +1,139 @@
+.ExaminationArticle {
+  &__section {
+    background: #009dff0e;
+    padding-top: 100px;
+  }
+
+
+
+  &__photo {
+    width: 100%;
+    height: auto;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      display: block;
+      max-height: 500px;
+      margin: 10px 0 20px; // или любое другое значение, чтобы ограничить высоту по вашему усмотрению
+    }
+  }
+  &__title {
+    font-family: Ubuntu;
+    font-size: 38px;
+    font-weight: 500;
+    padding: 10px 0;
+  }
+  &__author {
+    p{
+      margin-top: 10px;
+    }
+  }
+  &__content {
+    background: #fff;
+    padding: 20px 25px;
+  }
+  &__flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__avatar img {
+    width: 40px;
+  }
+  &__avatar {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+  }
+
+  &__category {
+    font-size: 20px;
+    padding-left: 80px;
+  }
+  &__categories li {
+    margin: 8px 0 10px 58px;
+    font-size: 17px;
+    font-weight: 500;
+    list-style: disk;
+    padding: 5px;
+    border-radius: 7px;
+    border: 2px solid rgb(10 133 209);
+    max-width: 250px;
+
+  }
+
+  &__organization h4 {
+    font-size: 20px;
+    padding: 10px 0 0 80px;
+  }
+  &__org li {
+    margin: 5px 0 5px 120px;
+    font-size: 16px;
+    font-weight: 500;
+    list-style: disc;
+    padding: 5px;
+    border: 2px solid rgb(10 133 209);
+    border-radius: 7px;
+    max-width: 250px;
+
+
+
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 30px;
+    padding: 50px;
+  }
+  &__btn input{
+    width: 300px;
+    padding: 10px 0;
+    border-radius: 12px;
+    outline: none;
+  }
+
+  &__reject,
+  &__publish {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  &__reject {
+    background: red;
+    color: white;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+
+  &__publish {
+    background: rgb(7, 107, 37);
+    color: white;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+
+  &__reject:hover {
+    background: darken(red, 10%);
+    color: lighten(white, 10%);
+    cursor: pointer;
+  }
+  &__publish:hover {
+    background: darken(#1c6907, 10%);
+    color: lighten(white, 10%);
+    cursor: pointer;
+  }
+}
+
+.data__p {
+  color: #858080;
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 5px;
+}

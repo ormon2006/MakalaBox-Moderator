@@ -1,0 +1,232 @@
+.IsLoggedIn {
+  &__section {
+    position: relative;
+    width: 100%;
+    min-height: 92vh;
+    overflow: hidden;
+  }
+  &__content {
+    text-align: center;
+    background: #fff;
+    width: 480px;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 15%);
+    border-radius: 12px;
+    padding: 0 20px; /* Added padding for smaller screens */
+  }
+  &__logo {
+    width: 65px;
+    height: 68px;
+    border-radius: 8px;
+    margin: 35px 0 15px;
+  }
+  &__title {
+    font-family: Ubuntu;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: black;
+    margin-bottom: 40px;
+  }
+  &__input-container {
+    position: relative;
+    margin-top: 16px;
+  }
+  &__input-container label {
+    position: absolute;
+    top: 20px;
+    left: 39px;
+    pointer-events: none;
+    transition: 0.2s ease all;
+    font-family: Ubuntu;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgb(87, 83, 83);
+    padding-left: 33px;
+    width: 100%;
+  }
+  &__input-container.active label {
+    top: 3px;
+    font-size: 12px;
+  }
+  &__input-container input {
+    width: 350px;
+    height: 56px;
+    border-radius: 10px;
+    background: #fff;
+    color: black;
+    padding-left: 19px;
+    border: 1px solid #c1c1c1;
+  }
+  &__input-container input:focus {
+    outline: 1px solid #c1c1c1;
+  }
+  &__input-container {
+    margin-top: 20px;
+  }
+  &__remember {
+    font-family: Ubuntu;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 36px 0 32px 40px;
+    color: #fff;
+    text-decoration: underline;
+  }
+  &__remember:hover {
+    text-decoration: none;
+  }
+  &__come {
+    font-family: Ubuntu;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center;
+    background: #ebebeb;
+    border: none;
+    text-align: center;
+    width: 350px;
+    height: 56px;
+    color: rgb(105, 103, 103);
+    border-radius: 12px;
+    margin: 40px 0 60px;
+  }
+  &__come a {
+    color: rgb(234, 231, 231);
+  }
+  &__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+    padding: 16px 0 40px;
+  }
+  &__come.filled {
+    background-color: green;
+    color: white;
+  }
+  &__come.valid a {
+    color: #fff;
+  }
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin: 5px 0;
+}
+.show-password-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 60px;
+  top: 57%;
+  transform: translateY(-50%);
+  padding: 5px;
+}
+
+.show-password-button img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 500px) {
+  .IsLoggedIn{
+    &__content {
+      width: 380px;
+    }
+    &__input-container input {
+      width: 310px;
+      height: 36px;
+
+    }
+    &__input-container label {
+      top: 10px;
+      left: 19px;
+    }
+    &__input-container.active label {
+      display: none;
+    }
+    &__title {
+
+      margin-bottom: 20px;
+    }
+    &__logo {
+      width: 55px;
+      height: 58px;
+      margin: 25px 0 15px;
+    }
+
+    &__come {
+
+      width: 310px;
+      height: 46px;
+      margin: 30px 0 50px;
+    }
+    
+  }
+  .show-password-button img {
+    width: 18px;
+    height: 18px;
+  }
+  .show-password-button {
+
+    right: 30px;
+
+  }
+  
+}
+
+
+
+@media screen and (max-width: 450px) {
+  .IsLoggedIn{
+    &__content {
+      width: 340px;
+    }
+    &__input-container input {
+      width: 250px;
+      height: 36px;
+      border-radius: 10px;
+      background: #fff;
+      color: black;
+      padding-left: 19px;
+      border: 1px solid #c1c1c1;
+    }
+    &__input-container label {
+      top: 10px;
+      left: 19px;
+    }
+    &__input-container.active label {
+      display: none;
+    }
+    &__title {
+
+      margin-bottom: 20px;
+    }
+    &__logo {
+      width: 55px;
+      height: 58px;
+      margin: 25px 0 15px;
+    }
+
+    &__come {
+
+      width: 250px;
+      height: 36px;
+      margin: 30px 0 50px;
+    }
+  }
+}

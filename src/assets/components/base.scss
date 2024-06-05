@@ -1,0 +1,170 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+body{
+    font-family: Ubuntu;
+    height: 100%;
+    
+}
+a {
+    text-decoration: none;
+}
+ul,
+li {
+    list-style: none;
+}
+
+.alert {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    border-radius: 4px;
+    height: 48px;
+    padding: 4px;
+}
+ 
+.alert[data-alert-type="warning"] {
+    background-color: #fff6e6;
+}
+ 
+.alert[data-alert-type="error"] {
+    background-color: #ffe6e6;
+}
+ 
+.alert[data-alert-type="info"] {
+    background-color: #e6ebff;
+}
+ 
+.alert[data-alert-type="success"] {
+    background-color: #e6ffe6;
+}
+ 
+[data-color-scheme="dark"] .alert[data-alert-type="warning"] {
+    background-color: #805d20;
+}
+ 
+[data-color-scheme="dark"] .alert[data-alert-type="error"] {
+    background-color: #802020;
+}
+ 
+[data-color-scheme="dark"] .alert[data-alert-type="info"] {
+    background-color: #203380;
+}
+ 
+[data-color-scheme="dark"] .alert[data-alert-type="success"] {
+    background-color: #208020;
+}
+ 
+.alert-icon-wrapper {
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 12px;
+    margin-right: 12px;
+    height: 18px;
+    width: 18px;
+    user-select: none;
+    cursor: pointer;
+}
+ 
+.alert-icon[data-alert-icon-type="warning"] {
+    color: #e69819
+}
+ 
+.alert-icon[data-alert-icon-type="error"] {
+    color: #d80d0d
+}
+ 
+.alert-icon[data-alert-icon-type="info"] {
+    color: #507aff
+}
+ 
+.alert-icon[data-alert-icon-type="success"] {
+    color: #0bc10b
+}
+ 
+.inline-content {
+    flex-grow: 1;
+}
+.bn-container[data-changing-font-demo] .bn-editor * {
+    font-family: 'Golos Text', sans-serif;
+  }
+  .bn-container[data-changing-font-demo] .bn-editor {
+    padding: 0;
+  }
+  .bn-container[data-changing-font-demo] .bn-default-styles {
+    font-size: 19px;
+  }
+  .bn-container[data-changing-font-demo]
+    .bn-editor
+    .bn-image-and-caption-wrapper {
+    margin: 15px 0px;
+  }
+  .bn-container[data-changing-font-demo]
+    .bn-editor
+    .bn-block-outer:not([data-prev-type])
+    > .bn-block
+    > .bn-block-content[data-content-type='heading'][data-level='3'] {
+    font-size: 1.3em;
+    font-weight: 600;
+  }
+  .bn-container[data-changing-font-demo]
+    .bn-editor
+    .bn-block-outer:not([data-prev-type])
+    > .bn-block
+    > .bn-block-content[data-content-type='heading'][data-level='2'] {
+    font-size: 1.8em;
+    font-weight: 600;
+  }
+  .bn-container[data-changing-font-demo]
+    .bn-editor
+    .bn-block-outer:not([data-prev-type])
+    > .bn-block
+    > .bn-block-content[data-content-type='heading'][data-level='1'] {
+    font-size: 2.1em;
+    font-weight: 700;
+  }
+  /* Blocknote viewer */
+  .cm-editor {
+    height: auto !important;
+  }
+  .slash-menu {
+    z-index: 9999;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    top: 8px;
+  }
+  
+  .slash-menu-item {
+    background-color: white;
+    border-radius: 2px;
+  
+    cursor: pointer;
+  
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .slash-menu-item:hover,
+  .slash-menu-item.selected {
+    background-color: lightgray;
+  }
+  .code-toolbar {
+    color: #eb5757;
+    font-family: 'Roboto Mono' !important;
+    border-radius: 3px;
+    padding: 1px;
+    font-weight: 500;
+  }

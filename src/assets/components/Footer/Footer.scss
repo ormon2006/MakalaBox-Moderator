@@ -1,0 +1,20 @@
+.Footer {
+  &__logo {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #02741d;
+  }
+}
+footer {
+  position: sticky;
+  background: #000;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}

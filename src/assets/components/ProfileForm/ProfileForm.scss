@@ -1,0 +1,312 @@
+$btnColor: #6abe26;
+$btnColor2: black;
+.ProfileForm {
+  &__section {
+    margin: 100px 50px 0 50px;
+  }
+  &__ava-img {
+    width: 199px;
+    height: 199px;
+    border-radius: 50%;
+    overflow: hidden; // Обрезаем изображение по кругу
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+  }
+  &__scale {
+    margin-top: 10px;
+  }
+  // Остальные стили остаются без изменений
+  &__flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 57px;
+    flex-wrap: wrap;
+  }
+  &__name {
+    margin: 16px 0;
+  }
+  &__nick {
+    padding-top: 30px;
+  }
+
+  &__nick input {
+    flex: 1;
+    width: 300px;
+    height: 38px;
+    padding-left: 12px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    border: 1.5px solid #9c8e8e;
+    outline: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+  &__saved {
+    width: 128px;
+    border-radius: 10px;
+    height: 38px;
+    background: linear-gradient(
+        to right,
+        darken($btnColor, 10%) 50%,
+        $btnColor 50%
+      )
+      repeat scroll right bottom / 200% 100% rgba(0, 0, 0, 0);
+    text-align: center;
+    transition: background 350ms ease-in-out;
+    color: #fff;
+    border: none;
+    &:hover {
+      background-position: left bottom;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__surname img {
+    position: absolute;
+    right: 15px;
+  }
+  &__edit{
+    width: 128px;
+    border-radius: 10px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px ;
+    color: black;
+    background: linear-gradient(
+        to right,
+        darken($btnColor2, 10%) 50%,
+        white 50%
+      )
+      repeat scroll right bottom / 200% 100% rgba(0, 0, 0, 0);
+    text-align: center;
+    text-align: center;
+    transition: background 350ms ease-in-out;
+
+    &:hover {
+      background-position: left bottom;
+      color: white;
+    }
+  }
+  &__reset {
+    width: 128px;
+    border-radius: 10px;
+    height: 38px;
+    color: black;
+    background: linear-gradient(
+        to right,
+        darken($btnColor2, 10%) 50%,
+        white 50%
+      )
+      repeat scroll right bottom / 200% 100% rgba(0, 0, 0, 0);
+    text-align: center;
+    text-align: center;
+    transition: background 350ms ease-in-out;
+
+    &:hover {
+      background-position: left bottom;
+      color: white;
+    }
+  }
+  &__name img {
+    position: absolute;
+    right: 15px;
+  }
+  &__nickname img {
+    position: absolute;
+    right: 15px;
+  }
+
+  &__surname,
+  &__name,
+  &__nickname {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+
+    label {
+      margin-right: 12px;
+      width: 30%;
+    }
+    input {
+      position: relative;
+    }
+    &:not(:last-child) {
+      margin-right: 12px; 
+    }
+  }
+}
+.avatar__flex {
+  display: flex;
+  align-items: center;
+  column-gap: 18px;
+  padding-top: 18px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.09px;
+  text-align: left;
+}
+
+.avatar__flex {
+  display: flex;
+  align-items: center;
+  column-gap: 18px;
+  padding-top: 18px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.09px;
+  text-align: left;
+}
+.add__avatar {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+.add__avatar label {
+  display: flex;
+  width: 100%;
+  column-gap: 10px;
+  cursor: pointer;
+}
+.remove__avatar {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  cursor: pointer;
+}
+.ProfileForm__select-avatar {
+  margin-top: 10px;
+}
+
+.avatar-selection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.avatar-option {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  transition: border 0.3s;
+}
+
+.ProfileForm__select-avatar {
+  margin-top: 10px;
+  position: relative; /* Добавляем относительное позиционирование */
+}
+
+.avatar-selection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  position: absolute; /* Абсолютное позиционирование */
+  top: calc(100% + 10px); /* Позиционируем список под кнопкой выбора аватара */
+  left: 0;
+  z-index: 1; /* Устанавливаем z-index, чтобы список находился поверх других элементов */
+  background-color: #ffffff; /* Добавим белый фон, чтобы список был виден */
+  border: 1px solid #ced4da; /* Добавим рамку для списка */
+  border-radius: 5px; /* Скруглим углы списка */
+  padding: 5px; /* Добавим небольшой внутренний отступ для контента */
+}
+
+.avatar-option {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  transition: border 0.3s;
+}
+
+.avatar-option:hover {
+  border: 2px solid #007bff;
+}
+
+.ProfileForm__input-container {
+  display: flex;
+  align-items: center;
+}
+
+.ProfileForm__input-container input {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.ProfileForm__input-container img {
+  cursor: pointer;
+}
+
+.Profile__btn {
+  display: flex;
+  align-items: center;
+  justify-content: sp;
+}
+.avatar__flex-one {
+  display: none;
+}
+@media screen and (max-width: 941px) {
+  .avatar__flex {
+    display: none;
+  }
+  .avatar__flex-one {
+    display: block;
+    display: flex;
+    column-gap: 30px;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 839px) {
+  .Card{
+    &__block{
+      justify-content: center;
+    }
+  }
+  .flex__card{
+    justify-content: center;
+
+  }
+}
+
+@media screen and (max-width: 745px) {
+  .ProfileForm{
+    &__flex{
+      display: grid;
+      justify-content: center;
+    }
+    &__avatar{
+      display: flex;
+      align-items: center;
+      column-gap: 30px;
+    }
+    &-scale{
+      margin: 20px 0;
+    }
+  }
+
+  
+}
+
+

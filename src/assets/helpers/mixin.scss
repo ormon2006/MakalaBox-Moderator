@@ -1,0 +1,18 @@
+  @mixin flexClass( $display, $alignItems, $justifyContent: null, $columnGap: null) {
+
+    display: $display;
+    align-items: $alignItems;
+
+    @if $justifyContent {
+      justify-content: $justifyContent;
+    }
+
+    @if $columnGap {
+      column-gap: $columnGap;
+    }
+  }
+
+  @mixin font ($weight, $size) {
+    font-weight: $weight;
+    font-size: $size;
+  }
